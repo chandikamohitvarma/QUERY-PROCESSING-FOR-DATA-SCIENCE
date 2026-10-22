@@ -1,0 +1,17 @@
+
+import pandas as pd
+
+employees = pd.DataFrame({
+    'Employee_ID': [101, 102, 103],
+    'Name': ['Arun', 'Bala', 'Charan']
+})
+
+salaries = pd.DataFrame({
+    'Employee_ID': [101, 102, 103],
+    'Salary': [25000, 30000, 35000]
+})
+
+result = pd.merge(employees, salaries, on='Employee_ID')
+
+print("Merged DataFrame:")
+print(result)
