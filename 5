@@ -1,0 +1,16 @@
+
+import pandas as pd
+
+data = {
+    'Employee_ID': [103, 101, 104, 102],
+    'Name': ['Charan', 'Arun', 'Divya', 'Bala'],
+    'Salary': [30000, 25000, 50000, 40000]
+}
+
+df = pd.DataFrame(data)
+
+print("Ascending order:")
+print(df.sort_values(by='Salary'))
+
+print("\nDescending order:")
+print(df.sort_values(by='Salary', ascending=False))
