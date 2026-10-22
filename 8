@@ -1,0 +1,15 @@
+
+import pandas as pd
+
+data = {
+    'Employee_ID': [101, 102, 103, 104, 105],
+    'Department': ['CSE', 'IT', 'CSE', 'IT', 'ECE'],
+    'Salary': [25000, 30000, 35000, 40000, 28000]
+}
+
+df = pd.DataFrame(data)
+
+result = df.groupby('Department')['Salary'].mean()
+
+print("Average Salary by Department:")
+print(result)
