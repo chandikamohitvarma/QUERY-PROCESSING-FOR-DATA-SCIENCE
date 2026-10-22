@@ -1,0 +1,17 @@
+
+import pandas as pd
+
+data = {
+    'Employee_ID': [101, 102, 103],
+    'Name': ['Arun', 'Bala', 'Charan'],
+    'Department': ['CSE', 'IT', 'ECE'],
+    'Salary': [25000, 30000, 28000]
+}
+
+df = pd.DataFrame(data)
+
+print("Employee Names:")
+print(df['Name'])
+
+print("\nEmployee Names and Salaries:")
+print(df[['Name', 'Salary']])
