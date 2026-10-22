@@ -1,0 +1,21 @@
+
+import pandas as pd
+
+data = {
+    'Employee_ID': [101, 102, 103, 102, 104],
+    'Name': ['Arun', 'Bala', 'Charan', 'Bala', 'Divya'],
+    'Department': ['CSE', 'IT', 'ECE', 'IT', 'CSE']
+}
+
+df = pd.DataFrame(data)
+
+print("Original DataFrame:")
+print(df)
+
+print("\nDuplicate Records:")
+print(df[df.duplicated()])
+
+df = df.drop_duplicates()
+
+print("\nDataFrame after removing duplicates:")
+print(df)
