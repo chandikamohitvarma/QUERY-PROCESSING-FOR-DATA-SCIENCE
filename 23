@@ -1,0 +1,33 @@
+
+import matplotlib.pyplot as plt
+
+def read_data_from_file(filename):
+    x_coords = []
+    y_coords = []
+
+    with open(filename, 'r') as file:
+        for line in file:
+            parts = line.strip().split()
+
+            if len(parts) == 2:
+                x_coords.append(float(parts[0]))
+                y_coords.append(float(parts[1]))
+
+    return x_coords, y_coords
+
+x_data, y_data = read_data_from_file('test.txt')
+
+plt.plot(
+    x_data,
+    y_data,
+    marker='o',
+    linestyle='-',
+    color='blue'
+)
+
+plt.title("Plot of Data Read from Text File")
+plt.xlabel("X-Axis Values (First Column)")
+plt.ylabel("Y-Axis Values (Second Column)")
+plt.grid(True)
+
+plt.show()
