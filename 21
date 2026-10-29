@@ -1,0 +1,14 @@
+
+import pandas as pd
+
+df = pd.DataFrame({
+    'ID': [1, 2, 3, 4, 5],
+    'Product': [
+        'LaPtoP', 'mObile', 'TaBLeT',
+        'Camera', 'Printer'
+    ]
+})
+
+df['Swapped_Case_Product'] = df['Product'].str.swapcase()
+
+print(df[['ID', 'Product', 'Swapped_Case_Product']])
