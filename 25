@@ -1,0 +1,26 @@
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4, 5]
+
+y1 = [2, 4, 6, 8, 10]
+y2 = [1, 4, 9, 16, 25]
+y3 = [5, 10, 15, 20, 25]
+
+plt.plot(x, y1, color='red',
+         linewidth=2, label='Line 1')
+
+plt.plot(x, y2, color='blue',
+         linewidth=3, label='Line 2')
+
+plt.plot(x, y3, color='green',
+         linewidth=4, label='Line 3')
+
+plt.xlabel('X - Axis')
+plt.ylabel('Y - Axis')
+
+plt.title('Multiple Lines with Different Widths and Colors')
+
+plt.legend()
+plt.grid(True)
+
+plt.show()
