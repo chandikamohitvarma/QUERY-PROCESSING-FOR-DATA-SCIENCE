@@ -1,0 +1,26 @@
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4, 5]
+
+y1 = [1, 4, 9, 16, 25]
+y2 = [1, 8, 27, 64, 125]
+
+plt.subplot(1, 2, 1)
+
+plt.plot(x, y1, color='red', marker='o')
+
+plt.title('Square Numbers')
+plt.xlabel('Input')
+plt.ylabel('Square')
+
+plt.subplot(1, 2, 2)
+
+plt.plot(x, y2, color='blue', marker='s')
+
+plt.title('Cube Numbers')
+plt.xlabel('Input')
+plt.ylabel('Cube')
+
+plt.tight_layout()
+
+plt.show()
