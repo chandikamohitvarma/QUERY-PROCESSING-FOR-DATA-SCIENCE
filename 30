@@ -1,0 +1,32 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+groups = ['G1', 'G2', 'G3', 'G4', 'G5']
+
+men_means = [22, 30, 35, 35, 26]
+women_means = [25, 32, 30, 35, 29]
+
+x = np.arange(len(groups))
+width = 0.35
+
+fig, ax = plt.subplots()
+
+rects1 = ax.bar(
+    x - width/2, men_means,
+    width, label='Men'
+)
+
+rects2 = ax.bar(
+    x + width/2, women_means,
+    width, label='Women'
+)
+
+ax.set_ylabel('Scores')
+ax.set_title('Scores by group and gender')
+
+ax.set_xticks(x)
+ax.set_xticklabels(groups)
+
+ax.legend()
+
+plt.show()
