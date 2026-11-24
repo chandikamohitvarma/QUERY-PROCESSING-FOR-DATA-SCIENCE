@@ -1,0 +1,23 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate sample data
+x = np.random.rand(50)
+y = np.random.rand(50)
+
+# Create the plot
+plt.figure(figsize=(8, 5))
+
+plt.scatter(
+    x, y,
+    s=100,
+    facecolors='none',
+    edgecolors='blue',
+    linewidths=1.5
+)
+
+plt.title("Scatter Plot with Empty Circles")
+plt.xlabel("X Axis")
+plt.ylabel("Y Axis")
+
+plt.show()
