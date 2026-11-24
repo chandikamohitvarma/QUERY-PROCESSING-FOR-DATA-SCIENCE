@@ -1,0 +1,37 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Set seed for reproducibility
+np.random.seed(42)
+
+# Generate 50 random points
+n = 50
+x = np.random.rand(n)
+y = np.random.rand(n)
+
+# Generate random sizes and colors
+sizes = (np.random.rand(n) * 50) ** 2
+colors = np.random.rand(n)
+
+# Create scatter plot
+plt.figure(figsize=(10, 6))
+
+scatter = plt.scatter(
+    x, y,
+    s=sizes,
+    c=colors,
+    alpha=0.6,
+    edgecolors='blue',
+    facecolors='none',
+    linewidths=2
+)
+
+plt.title("Scatter Plot of Randomly Distributed Balls of Different Sizes")
+plt.xlabel("Random X Coordinate")
+plt.ylabel("Random Y Coordinate")
+
+plt.colorbar(scatter, label='Color Intensity Scale')
+plt.grid(True, linestyle='--', alpha=0.5)
+
+plt.savefig('random_scatter_plot.png')
+plt.show()
