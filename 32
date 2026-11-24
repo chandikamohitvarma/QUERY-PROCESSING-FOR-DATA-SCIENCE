@@ -1,0 +1,14 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.random.randn(50)
+y = np.random.randn(50)
+
+plt.scatter(x, y, color='purple')
+
+plt.xlabel('Random X values')
+plt.ylabel('Random Y values')
+
+plt.title('Scatter Plot of Random Distribution')
+
+plt.show()
